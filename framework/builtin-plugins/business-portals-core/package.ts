@@ -23,9 +23,6 @@ export default definePackage({
     "workflow-core",
     "portal-core",
     "party-relationships-core",
-    "sales-core",
-    "support-service-core",
-    "contracts-core",
     "traceability-core"
   ],
   "dependencyContracts": [
@@ -60,27 +57,81 @@ export default definePackage({
       "rationale": "Required for Business Portals Core to keep its boundary governed and explicit."
     },
     {
-      "packageId": "sales-core",
+      "packageId": "traceability-core",
       "class": "required",
       "rationale": "Required for Business Portals Core to keep its boundary governed and explicit."
     },
     {
       "packageId": "support-service-core",
-      "class": "required",
-      "rationale": "Required for Business Portals Core to keep its boundary governed and explicit."
+      "class": "optional",
+      "rationale": "Recommended with Business Portals Core for smoother production adoption and operator experience."
     },
     {
       "packageId": "contracts-core",
-      "class": "required",
-      "rationale": "Required for Business Portals Core to keep its boundary governed and explicit."
+      "class": "optional",
+      "rationale": "Recommended with Business Portals Core for smoother production adoption and operator experience."
     },
     {
-      "packageId": "traceability-core",
-      "class": "required",
-      "rationale": "Required for Business Portals Core to keep its boundary governed and explicit."
+      "packageId": "hr-payroll-core",
+      "class": "optional",
+      "rationale": "Recommended with Business Portals Core for smoother production adoption and operator experience."
+    },
+    {
+      "packageId": "sales-core",
+      "class": "capability-enhancing",
+      "rationale": "Improves Business Portals Core with deeper downstream automation, visibility, or workflow coverage."
+    },
+    {
+      "packageId": "procurement-core",
+      "class": "capability-enhancing",
+      "rationale": "Improves Business Portals Core with deeper downstream automation, visibility, or workflow coverage."
+    },
+    {
+      "packageId": "subscriptions-core",
+      "class": "capability-enhancing",
+      "rationale": "Improves Business Portals Core with deeper downstream automation, visibility, or workflow coverage."
+    },
+    {
+      "packageId": "analytics-bi-core",
+      "class": "capability-enhancing",
+      "rationale": "Improves Business Portals Core with deeper downstream automation, visibility, or workflow coverage."
     }
   ],
-  "optionalWith": [],
+  "recommendedPlugins": [
+    "support-service-core",
+    "contracts-core",
+    "hr-payroll-core"
+  ],
+  "capabilityEnhancingPlugins": [
+    "sales-core",
+    "procurement-core",
+    "subscriptions-core",
+    "analytics-bi-core"
+  ],
+  "integrationOnlyPlugins": [],
+  "suggestedPacks": [
+    "localization-india",
+    "localization-united-states",
+    "sector-ecommerce",
+    "sector-education",
+    "sector-epc-professional-delivery",
+    "sector-financial-services-compliance",
+    "sector-healthcare",
+    "sector-manufacturing",
+    "sector-nonprofit",
+    "sector-professional-services",
+    "sector-retail",
+    "sector-trading-distribution"
+  ],
+  "standaloneSupported": false,
+  "installNotes": [
+    "Portals project other plugins; they should be installed after the source-of-truth plugins users need to see or request against."
+  ],
+  "optionalWith": [
+    "support-service-core",
+    "contracts-core",
+    "hr-payroll-core"
+  ],
   "conflictsWith": [],
   "providesCapabilities": [
     "portals.customer-workspaces",

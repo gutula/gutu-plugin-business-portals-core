@@ -36,9 +36,6 @@
     "@plugins/workflow-core": "workspace:*",
     "@plugins/portal-core": "workspace:*",
     "@plugins/party-relationships-core": "workspace:*",
-    "@plugins/sales-core": "workspace:*",
-    "@plugins/support-service-core": "workspace:*",
-    "@plugins/contracts-core": "workspace:*",
     "@plugins/traceability-core": "workspace:*"
   }
 }

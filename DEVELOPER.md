@@ -54,6 +54,11 @@ Projects governed business records into customer, vendor, and employee self-serv
 | Field | Value |
 | --- | --- |
 | Depends On | `auth-core`, `org-tenant-core`, `role-policy-core`, `workflow-core`, `portal-core`, `party-relationships-core`, `sales-core`, `support-service-core`, `contracts-core`, `traceability-core` |
+| Recommended Plugins | None |
+| Capability Enhancing | None |
+| Integration Only | None |
+| Suggested Packs | None |
+| Standalone Supported | Yes |
 | Requested Capabilities | `ui.register.admin`, `api.rest.mount`, `data.write.portals`, `events.publish.portals` |
 | Provides Capabilities | `portals.customer-workspaces`, `portals.vendor-workspaces`, `portals.employee-workspaces` |
 | Owns Data | `portals.customer-workspaces`, `portals.vendor-workspaces`, `portals.employee-workspaces`, `portals.portal-actions` |

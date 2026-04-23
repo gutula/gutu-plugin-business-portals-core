@@ -1,6 +1,41 @@
 {
   "packageId": "business-portals-core",
   "packName": "business-portals-core-addon-pack",
+  "requiredPlugins": [
+    "auth-core",
+    "org-tenant-core",
+    "role-policy-core",
+    "workflow-core",
+    "portal-core",
+    "party-relationships-core",
+    "traceability-core"
+  ],
+  "recommendedPlugins": [
+    "support-service-core",
+    "contracts-core",
+    "hr-payroll-core"
+  ],
+  "capabilityEnhancingPlugins": [
+    "sales-core",
+    "procurement-core",
+    "subscriptions-core",
+    "analytics-bi-core"
+  ],
+  "integrationOnlyPlugins": [],
+  "suggestedPacks": [
+    "localization-india",
+    "localization-united-states",
+    "sector-ecommerce",
+    "sector-education",
+    "sector-epc-professional-delivery",
+    "sector-financial-services-compliance",
+    "sector-healthcare",
+    "sector-manufacturing",
+    "sector-nonprofit",
+    "sector-professional-services",
+    "sector-retail",
+    "sector-trading-distribution"
+  ],
   "expectedActions": [
     "portals.customer-workspaces.publish",
     "portals.portal-actions.capture",

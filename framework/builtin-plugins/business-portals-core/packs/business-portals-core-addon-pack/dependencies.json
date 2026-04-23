@@ -7,11 +7,35 @@
     "workflow-core",
     "portal-core",
     "party-relationships-core",
-    "sales-core",
-    "support-service-core",
-    "contracts-core",
     "traceability-core"
   ],
+  "recommendedPlugins": [
+    "support-service-core",
+    "contracts-core",
+    "hr-payroll-core"
+  ],
+  "capabilityEnhancingPlugins": [
+    "sales-core",
+    "procurement-core",
+    "subscriptions-core",
+    "analytics-bi-core"
+  ],
+  "integrationOnlyPlugins": [],
+  "suggestedPacks": [
+    "localization-india",
+    "localization-united-states",
+    "sector-ecommerce",
+    "sector-education",
+    "sector-epc-professional-delivery",
+    "sector-financial-services-compliance",
+    "sector-healthcare",
+    "sector-manufacturing",
+    "sector-nonprofit",
+    "sector-professional-services",
+    "sector-retail",
+    "sector-trading-distribution"
+  ],
+  "standaloneSupported": false,
   "requiredCapabilities": [
     "ui.register.admin",
     "api.rest.mount",
