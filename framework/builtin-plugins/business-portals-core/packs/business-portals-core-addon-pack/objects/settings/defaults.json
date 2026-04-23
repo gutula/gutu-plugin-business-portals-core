@@ -1,0 +1,9 @@
+{
+  "workspace": "business-portals",
+  "route": "/admin/business/portals",
+  "pageTitle": "Business Portals Control Room",
+  "defaultRecordState": "draft",
+  "defaultApprovalState": "pending",
+  "defaultPostingState": "unposted",
+  "defaultFulfillmentState": "none"
+}

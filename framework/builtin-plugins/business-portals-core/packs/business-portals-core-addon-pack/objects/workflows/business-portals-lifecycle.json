@@ -1,0 +1,9 @@
+{
+  "workflowId": "business-portals-lifecycle",
+  "actors": [
+    "portal-admin",
+    "ops",
+    "approver"
+  ],
+  "description": "Publish portal projections, capture self-service actions, route requests, and reconcile projected state."
+}

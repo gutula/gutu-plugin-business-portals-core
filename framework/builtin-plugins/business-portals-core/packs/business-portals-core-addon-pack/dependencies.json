@@ -1,0 +1,21 @@
+{
+  "plugin": "business-portals-core",
+  "requiredPlugins": [
+    "auth-core",
+    "org-tenant-core",
+    "role-policy-core",
+    "workflow-core",
+    "portal-core",
+    "party-relationships-core",
+    "sales-core",
+    "support-service-core",
+    "contracts-core",
+    "traceability-core"
+  ],
+  "requiredCapabilities": [
+    "ui.register.admin",
+    "api.rest.mount",
+    "data.write.portals",
+    "events.publish.portals"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "pluginId": "business-portals-core",
+  "reports": [
+    "Self-Service Activity Summary",
+    "Portal Adoption",
+    "Portal Exception Queue"
+  ],
+  "exceptionQueues": [
+    "portal-access-review",
+    "self-service-action-failures",
+    "portal-identity-link-review"
+  ],
+  "operationalScenarios": [
+    "customer-self-service",
+    "vendor-response-flow",
+    "employee-request-flow"
+  ]
+}

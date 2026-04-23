@@ -1,0 +1,10 @@
+{
+  "automationId": "business-portals-core.reconciliation.default",
+  "trigger": "exception-record-opened",
+  "action": "portals.reconciliation.run",
+  "queues": [
+    "portal-access-review",
+    "self-service-action-failures",
+    "portal-identity-link-review"
+  ]
+}

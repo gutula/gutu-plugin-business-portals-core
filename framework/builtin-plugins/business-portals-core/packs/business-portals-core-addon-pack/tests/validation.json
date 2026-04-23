@@ -1,0 +1,24 @@
+{
+  "packageId": "business-portals-core",
+  "packName": "business-portals-core-addon-pack",
+  "expectedActions": [
+    "portals.customer-workspaces.publish",
+    "portals.portal-actions.capture",
+    "portals.employee-workspaces.publish"
+  ],
+  "expectedResources": [
+    "portals.customer-workspaces",
+    "portals.vendor-workspaces",
+    "portals.employee-workspaces"
+  ],
+  "expectedReports": [
+    "Self-Service Activity Summary",
+    "Portal Adoption",
+    "Portal Exception Queue"
+  ],
+  "expectedExceptionQueues": [
+    "portal-access-review",
+    "self-service-action-failures",
+    "portal-identity-link-review"
+  ]
+}
