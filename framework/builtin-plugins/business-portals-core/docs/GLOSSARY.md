@@ -9,6 +9,10 @@
 | portals.customer-workspaces.publish | Publish Customer Portal |
 | portals.portal-actions.capture | Capture Portal Action |
 | portals.employee-workspaces.publish | Publish Employee Portal |
+| portals.customer-workspaces.hold | Place Record On Hold |
+| portals.customer-workspaces.release | Release Record Hold |
+| portals.customer-workspaces.amend | Amend Record |
+| portals.customer-workspaces.reverse | Reverse Record |
 | portals.projections.refresh | Job definition queued on `portals-projections`. |
 | portals.reconciliation.run | Job definition queued on `portals-reconciliation`. |
 | business-portals-lifecycle | Publish portal projections, capture self-service actions, route requests, and reconcile projected state. |

@@ -6,7 +6,11 @@ export const scenarioDefinitions = [
     "actionIds": [
       "portals.customer-workspaces.publish",
       "portals.portal-actions.capture",
-      "portals.employee-workspaces.publish"
+      "portals.employee-workspaces.publish",
+      "portals.customer-workspaces.hold",
+      "portals.customer-workspaces.release",
+      "portals.customer-workspaces.amend",
+      "portals.customer-workspaces.reverse"
     ],
     "downstreamTargets": {
       "create": [],
@@ -26,7 +30,11 @@ export const scenarioDefinitions = [
     "actionIds": [
       "portals.customer-workspaces.publish",
       "portals.portal-actions.capture",
-      "portals.employee-workspaces.publish"
+      "portals.employee-workspaces.publish",
+      "portals.customer-workspaces.hold",
+      "portals.customer-workspaces.release",
+      "portals.customer-workspaces.amend",
+      "portals.customer-workspaces.reverse"
     ],
     "downstreamTargets": {
       "create": [],
@@ -46,7 +54,11 @@ export const scenarioDefinitions = [
     "actionIds": [
       "portals.customer-workspaces.publish",
       "portals.portal-actions.capture",
-      "portals.employee-workspaces.publish"
+      "portals.employee-workspaces.publish",
+      "portals.customer-workspaces.hold",
+      "portals.customer-workspaces.release",
+      "portals.customer-workspaces.amend",
+      "portals.customer-workspaces.reverse"
     ],
     "downstreamTargets": {
       "create": [],

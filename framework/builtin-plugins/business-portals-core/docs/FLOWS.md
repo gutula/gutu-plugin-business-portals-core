@@ -5,6 +5,10 @@
 - `portals.customer-workspaces.publish`: Publish Customer Portal
 - `portals.portal-actions.capture`: Capture Portal Action
 - `portals.employee-workspaces.publish`: Publish Employee Portal
+- `portals.customer-workspaces.hold`: Place Record On Hold
+- `portals.customer-workspaces.release`: Release Record Hold
+- `portals.customer-workspaces.amend`: Amend Record
+- `portals.customer-workspaces.reverse`: Reverse Record
 
 ## Operational scenario matrix
 
@@ -69,6 +73,106 @@ Forbidden shortcuts:
 Publish Employee Portal
 
 Permission: `portals.employee-workspaces.write`
+
+Business purpose: Expose the plugin’s write boundary through a validated, auditable action contract.
+
+Preconditions:
+
+- Caller input must satisfy the action schema exported by the plugin.
+- The caller must satisfy the declared permission and any host-level installation constraints.
+- Integration should honor the action’s non-idempotent semantics.
+
+Side effects:
+
+- Mutates or validates state owned by `portals.customer-workspaces`, `portals.vendor-workspaces`, `portals.employee-workspaces`.
+- May schedule or describe follow-up background work.
+
+Forbidden shortcuts:
+
+- Do not bypass the action contract with undocumented service mutations in application code.
+- Do not document extra hooks, retries, or lifecycle semantics unless they are explicitly exported here.
+
+
+### `portals.customer-workspaces.hold`
+
+Place Record On Hold
+
+Permission: `portals.customer-workspaces.write`
+
+Business purpose: Expose the plugin’s write boundary through a validated, auditable action contract.
+
+Preconditions:
+
+- Caller input must satisfy the action schema exported by the plugin.
+- The caller must satisfy the declared permission and any host-level installation constraints.
+- Integration should honor the action’s non-idempotent semantics.
+
+Side effects:
+
+- Mutates or validates state owned by `portals.customer-workspaces`, `portals.vendor-workspaces`, `portals.employee-workspaces`.
+- May schedule or describe follow-up background work.
+
+Forbidden shortcuts:
+
+- Do not bypass the action contract with undocumented service mutations in application code.
+- Do not document extra hooks, retries, or lifecycle semantics unless they are explicitly exported here.
+
+
+### `portals.customer-workspaces.release`
+
+Release Record Hold
+
+Permission: `portals.customer-workspaces.write`
+
+Business purpose: Expose the plugin’s write boundary through a validated, auditable action contract.
+
+Preconditions:
+
+- Caller input must satisfy the action schema exported by the plugin.
+- The caller must satisfy the declared permission and any host-level installation constraints.
+- Integration should honor the action’s non-idempotent semantics.
+
+Side effects:
+
+- Mutates or validates state owned by `portals.customer-workspaces`, `portals.vendor-workspaces`, `portals.employee-workspaces`.
+- May schedule or describe follow-up background work.
+
+Forbidden shortcuts:
+
+- Do not bypass the action contract with undocumented service mutations in application code.
+- Do not document extra hooks, retries, or lifecycle semantics unless they are explicitly exported here.
+
+
+### `portals.customer-workspaces.amend`
+
+Amend Record
+
+Permission: `portals.customer-workspaces.write`
+
+Business purpose: Expose the plugin’s write boundary through a validated, auditable action contract.
+
+Preconditions:
+
+- Caller input must satisfy the action schema exported by the plugin.
+- The caller must satisfy the declared permission and any host-level installation constraints.
+- Integration should honor the action’s non-idempotent semantics.
+
+Side effects:
+
+- Mutates or validates state owned by `portals.customer-workspaces`, `portals.vendor-workspaces`, `portals.employee-workspaces`.
+- May schedule or describe follow-up background work.
+
+Forbidden shortcuts:
+
+- Do not bypass the action contract with undocumented service mutations in application code.
+- Do not document extra hooks, retries, or lifecycle semantics unless they are explicitly exported here.
+
+
+### `portals.customer-workspaces.reverse`
+
+Reverse Record
+
+Permission: `portals.customer-workspaces.write`
 
 Business purpose: Expose the plugin’s write boundary through a validated, auditable action contract.
 

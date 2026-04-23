@@ -71,6 +71,10 @@ Projects governed business records into customer, vendor, and employee self-serv
 | Action | `portals.customer-workspaces.publish` | Permission: `portals.customer-workspaces.write` | Publish Customer Portal<br>Idempotent<br>Audited |
 | Action | `portals.portal-actions.capture` | Permission: `portals.portal-actions.write` | Capture Portal Action<br>Non-idempotent<br>Audited |
 | Action | `portals.employee-workspaces.publish` | Permission: `portals.employee-workspaces.write` | Publish Employee Portal<br>Non-idempotent<br>Audited |
+| Action | `portals.customer-workspaces.hold` | Permission: `portals.customer-workspaces.write` | Place Record On Hold<br>Non-idempotent<br>Audited |
+| Action | `portals.customer-workspaces.release` | Permission: `portals.customer-workspaces.write` | Release Record Hold<br>Non-idempotent<br>Audited |
+| Action | `portals.customer-workspaces.amend` | Permission: `portals.customer-workspaces.write` | Amend Record<br>Non-idempotent<br>Audited |
+| Action | `portals.customer-workspaces.reverse` | Permission: `portals.customer-workspaces.write` | Reverse Record<br>Non-idempotent<br>Audited |
 | Resource | `portals.customer-workspaces` | Portal disabled | Customer-facing portal workspace definitions and projection rules.<br>Purpose: Expose customer self-service without making the portal the source of business truth.<br>Admin auto-CRUD enabled<br>Fields: `title`, `recordState`, `approvalState`, `postingState`, `fulfillmentState`, `updatedAt` |
 | Resource | `portals.vendor-workspaces` | Portal disabled | Vendor and supplier portal workspace definitions.<br>Purpose: Support supplier-facing workflows while preserving procurement ownership.<br>Admin auto-CRUD enabled<br>Fields: `label`, `status`, `requestedAction`, `updatedAt` |
 | Resource | `portals.employee-workspaces` | Portal disabled | Employee self-service portal workspace definitions and actions.<br>Purpose: Project HR-safe self-service experiences without bypassing workforce governance.<br>Admin auto-CRUD enabled<br>Fields: `severity`, `status`, `reasonCode`, `updatedAt` |
@@ -156,11 +160,11 @@ stateDiagram-v2
 ### 1. Host wiring
 
 ```ts
-import { manifest, createPrimaryRecordAction, BusinessPrimaryResource, jobDefinitions, workflowDefinitions, adminContributions, uiSurface } from "@plugins/business-portals-core";
+import { manifest, publishCustomerPortalAction, BusinessPrimaryResource, jobDefinitions, workflowDefinitions, adminContributions, uiSurface } from "@plugins/business-portals-core";
 
 export const pluginSurface = {
   manifest,
-  createPrimaryRecordAction,
+  publishCustomerPortalAction,
   BusinessPrimaryResource,
   jobDefinitions,
   workflowDefinitions,
@@ -174,10 +178,10 @@ Use this pattern when your host needs to register the plugin’s declared export
 ### 2. Action-first orchestration
 
 ```ts
-import { manifest, createPrimaryRecordAction } from "@plugins/business-portals-core";
+import { manifest, publishCustomerPortalAction } from "@plugins/business-portals-core";
 
 console.log("plugin", manifest.id);
-console.log("action", createPrimaryRecordAction.id);
+console.log("action", publishCustomerPortalAction.id);
 ```
 
 - Prefer action IDs as the stable integration boundary.
@@ -219,7 +223,7 @@ console.log("action", createPrimaryRecordAction.id);
 
 ### Current truth
 
-- Exports 3 governed actions: `portals.customer-workspaces.publish`, `portals.portal-actions.capture`, `portals.employee-workspaces.publish`.
+- Exports 7 governed actions: `portals.customer-workspaces.publish`, `portals.portal-actions.capture`, `portals.employee-workspaces.publish`, `portals.customer-workspaces.hold`, `portals.customer-workspaces.release`, `portals.customer-workspaces.amend`, `portals.customer-workspaces.reverse`.
 - Owns 3 resource contracts: `portals.customer-workspaces`, `portals.vendor-workspaces`, `portals.employee-workspaces`.
 - Publishes 2 job definitions with explicit queue and retry policy metadata.
 - Publishes 1 workflow definition with state-machine descriptions and mandatory steps.
@@ -233,7 +237,7 @@ console.log("action", createPrimaryRecordAction.id);
 
 ### Current gaps
 
-- Repo-local documentation verification entrypoints were missing before this pass and need to stay green as the repo evolves.
+- No extra gaps were discovered beyond the plugin’s declared boundaries.
 
 ### Recommended next
 
