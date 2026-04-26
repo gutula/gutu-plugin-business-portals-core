@@ -60,12 +60,12 @@ This tier is justified because unit coverage exists, contract coverage exists, i
 | Package | `@plugins/business-portals-core` |
 | Manifest ID | `business-portals-core` |
 | Repo | [gutu-plugin-business-portals-core](https://github.com/gutula/gutu-plugin-business-portals-core) |
-| Depends On | `auth-core`, `org-tenant-core`, `role-policy-core`, `workflow-core`, `portal-core`, `party-relationships-core`, `sales-core`, `support-service-core`, `contracts-core`, `traceability-core` |
-| Recommended Plugins | None |
-| Capability Enhancing | None |
+| Depends On | `auth-core`, `org-tenant-core`, `role-policy-core`, `workflow-core`, `portal-core`, `party-relationships-core`, `traceability-core` |
+| Recommended Plugins | `support-service-core`, `contracts-core`, `hr-payroll-core` |
+| Capability Enhancing | `sales-core`, `procurement-core`, `subscriptions-core`, `analytics-bi-core` |
 | Integration Only | None |
-| Suggested Packs | None |
-| Standalone Supported | Yes |
+| Suggested Packs | `localization-india`, `localization-united-states`, `sector-ecommerce`, `sector-education`, `sector-epc-professional-delivery`, `sector-financial-services-compliance`, `sector-healthcare`, `sector-manufacturing`, `sector-nonprofit`, `sector-professional-services`, `sector-retail`, `sector-trading-distribution` |
+| Standalone Supported | No |
 | Requested Capabilities | `ui.register.admin`, `api.rest.mount`, `data.write.portals`, `events.publish.portals` |
 | Provided Capabilities | `portals.customer-workspaces`, `portals.vendor-workspaces`, `portals.employee-workspaces` |
 | Runtime | bun>=1.3.12 |
@@ -74,13 +74,13 @@ This tier is justified because unit coverage exists, contract coverage exists, i
 
 ## Installation Guidance
 
-- Required plugins: `auth-core`, `org-tenant-core`, `role-policy-core`, `workflow-core`, `portal-core`, `party-relationships-core`, `sales-core`, `support-service-core`, `contracts-core`, `traceability-core`
-- Recommended plugins: none
-- Capability-enhancing plugins: none
+- Required plugins: `auth-core`, `org-tenant-core`, `role-policy-core`, `workflow-core`, `portal-core`, `party-relationships-core`, `traceability-core`
+- Recommended plugins: `support-service-core`, `contracts-core`, `hr-payroll-core`
+- Capability-enhancing plugins: `sales-core`, `procurement-core`, `subscriptions-core`, `analytics-bi-core`
 - Integration-only plugins: none
-- Suggested packs: none
-- Standalone supported: yes
-
+- Suggested packs: `localization-india`, `localization-united-states`, `sector-ecommerce`, `sector-education`, `sector-epc-professional-delivery`, `sector-financial-services-compliance`, `sector-healthcare`, `sector-manufacturing`, `sector-nonprofit`, `sector-professional-services`, `sector-retail`, `sector-trading-distribution`
+- Standalone supported: no
+- Portals project other plugins; they should be installed after the source-of-truth plugins users need to see or request against.
 
 ## Capability Matrix
 

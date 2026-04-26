@@ -53,12 +53,12 @@ Projects governed business records into customer, vendor, and employee self-serv
 
 | Field | Value |
 | --- | --- |
-| Depends On | `auth-core`, `org-tenant-core`, `role-policy-core`, `workflow-core`, `portal-core`, `party-relationships-core`, `sales-core`, `support-service-core`, `contracts-core`, `traceability-core` |
-| Recommended Plugins | None |
-| Capability Enhancing | None |
+| Depends On | `auth-core`, `org-tenant-core`, `role-policy-core`, `workflow-core`, `portal-core`, `party-relationships-core`, `traceability-core` |
+| Recommended Plugins | `support-service-core`, `contracts-core`, `hr-payroll-core` |
+| Capability Enhancing | `sales-core`, `procurement-core`, `subscriptions-core`, `analytics-bi-core` |
 | Integration Only | None |
-| Suggested Packs | None |
-| Standalone Supported | Yes |
+| Suggested Packs | `localization-india`, `localization-united-states`, `sector-ecommerce`, `sector-education`, `sector-epc-professional-delivery`, `sector-financial-services-compliance`, `sector-healthcare`, `sector-manufacturing`, `sector-nonprofit`, `sector-professional-services`, `sector-retail`, `sector-trading-distribution` |
+| Standalone Supported | No |
 | Requested Capabilities | `ui.register.admin`, `api.rest.mount`, `data.write.portals`, `events.publish.portals` |
 | Provides Capabilities | `portals.customer-workspaces`, `portals.vendor-workspaces`, `portals.employee-workspaces` |
 | Owns Data | `portals.customer-workspaces`, `portals.vendor-workspaces`, `portals.employee-workspaces`, `portals.portal-actions` |
